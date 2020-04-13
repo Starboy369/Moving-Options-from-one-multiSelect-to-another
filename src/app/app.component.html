@@ -2,3 +2,14 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+
+    <select multiple class="custom-select" size="15" [ngModel]="LeftSelect"
+                        (ngModelChange)="chosenFieldsToRemove($event)">
+                        <option *ngFor="let items of LeftSelect">{{items}}</option>
+                    </select>
+                      <button  (click)="Add;">Add </button>
+                        <button  (click)="remove;">Delete </button>
+                        <select multiple class="custom-select" size="15" [ngModel]="RightSelect"
+                        (ngModelChange)="chosenFieldsToRemove($event)">
+                        <option *ngFor="let items of RightSelect">{{items}}</option>
+                    </select>
